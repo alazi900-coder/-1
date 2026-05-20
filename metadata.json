@@ -1,0 +1,8 @@
+{
+  "name": "Gemini Voice Studio",
+  "description": "استوديو جيمناي للأصوات: إنشاء أصوات احترافية لدبلجة الألعاب باستخدام الذكاء الاصطناعي",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

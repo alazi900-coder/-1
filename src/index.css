@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .zonai-bg {
+    background-color: #0b1d22;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(0, 255, 213, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(0, 255, 213, 0.08) 0%, transparent 50%);
+    position: relative;
+    z-index: 0;
+  }
+  .zonai-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,10 L30,40 L20,60 L50,80 L70,30 L90,90' stroke='%2300ffd5' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M40,10 L60,30 L50,60 L80,90 L110,40 L100,20' stroke='%2300ffd5' stroke-width='1' fill='none' stroke-linecap='round' stroke-linejoin='round' opacity='0.5'/%3E%3C/svg%3E");
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .zonai-stone {
+    background-color: #263836;
+    border: 2px solid #5a7470;
+    border-bottom-color: #172422;
+    border-right-color: #172422;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.6), inset 1px 1px 2px rgba(255,255,255,0.1);
+    color: #cbd5e1;
+  }
+  
+  .zonai-stone-active {
+    background-color: #172422;
+    border: 2px solid #172422;
+    border-bottom-color: #5a7470;
+    border-right-color: #5a7470;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.6), 0 0 8px rgba(45, 212, 191, 0.3);
+    color: #5eead4;
+  }
+
+  .zonai-parchment {
+    background-color: #e6d8b8;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    border: 8px solid #4a5c5a;
+    border-radius: 4px;
+    box-shadow: inset 0 0 30px rgba(139, 107, 72, 0.5), 0 10px 25px rgba(0,0,0,0.6);
+    color: #4a331f;
+  }
+
+  .zonai-gold-border {
+    border: 2px solid #ab7a3a;
+    background-color: #132422;
+    box-shadow: 0 0 10px rgba(171, 122, 58, 0.2), inset 0 0 20px rgba(0,0,0,0.8);
+    position: relative;
+  }
+  .zonai-gold-border::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 1px solid rgba(171, 122, 58, 0.4);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+
+  .zonai-icon {
+    filter: drop-shadow(0px -1px 0px rgba(0,0,0,0.8)) drop-shadow(0px 1px 0px rgba(255,255,255,0.2));
+  }
+}
